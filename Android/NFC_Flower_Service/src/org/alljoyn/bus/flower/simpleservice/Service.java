@@ -14,7 +14,7 @@
  *    OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
-package org.alljoyn.bus.samples.simpleservice;
+package org.alljoyn.bus.flower.simpleservice;
 
 import org.alljoyn.bus.BusAttachment;
 import org.alljoyn.bus.BusException;
@@ -25,6 +25,7 @@ import org.alljoyn.bus.SessionOpts;
 import org.alljoyn.bus.SessionPortListener;
 import org.alljoyn.bus.Status;
 import org.alljoyn.bus.annotation.BusMethod;
+import org.alljoyn.bus.flower.simpleservice.R;
 //import org.alljoyn.bus.p2p.WifiDirectAutoAccept;
 
 import android.app.Activity;

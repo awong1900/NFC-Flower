@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2010-2011, 2014, AllSeen Alliance. All rights reserved.
+ * Copyright (c) 2010-2011, AllSeen Alliance. All rights reserved.
  *
  *    Permission to use, copy, modify, and/or distribute this software for any
  *    purpose with or without fee is hereby granted, provided that the above
@@ -14,7 +14,7 @@
  *    OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
-package org.alljoyn.bus.samples.simpleservice;
+package org.alljoyn.bus.flower.simpleservice;
 
 import org.alljoyn.bus.BusException;
 import org.alljoyn.bus.annotation.BusInterface;
@@ -27,7 +27,7 @@ import org.alljoyn.bus.annotation.BusMethod;
  * not given the fully qualified name of the Java interface is be used.  In most instances its best
  * to assign an interface name since it helps promote code reuse.
  */
-@BusInterface(name = "org.alljoyn.bus.samples.simple.SimpleInterface")
+@BusInterface(name = "org.alljoyn.bus.flower.simple.SimpleInterface")
 public interface SimpleInterface {
 
     /*

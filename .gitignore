@@ -12,3 +12,17 @@ Android/NFC_Flower/bin/resources.ap_
 Android/NFC_Flower/gen/com/flower/nfcaction/BuildConfig.java
 Android/NFC_Flower/gen/com/flower/nfcaction/R.java
 Android/NFC_Flower/bin/jarlist.cache
+Android/NFC_Flower_Service/bin/resources.ap_
+Android/NFC_Flower_Service/bin/classes.dex
+Android/NFC_Flower/bin/dexedLibs/alljoyn-78266147f68b21825924e65d979d0045.jar
+Android/NFC_Flower/bin/dexedLibs/alljoyn-78266147f68b21825924e65d979d0045.jar
+Android/NFC_Flower/bin/dexedLibs/alljoyn-78266147f68b21825924e65d979d0045.jar
+Android/NFC_Flower/bin/dexedLibs/alljoyn-78266147f68b21825924e65d979d0045.jar
+Android/NFC_Flower_Service/gen/org/alljoyn/bus/flower/simpleservice/R.java
+Android/NFC_Flower_Service/gen/org/alljoyn/bus/flower/simpleservice/BuildConfig.java
+Android/NFC_Flower_Service/bin/res/crunch/drawable-mdpi/icon.png
+Android/NFC_Flower_Service/bin/res/crunch/drawable-ldpi/icon.png
+Android/NFC_Flower_Service/bin/res/crunch/drawable-hdpi/icon.png
+Android/NFC_Flower_Service/bin/dexedLibs/alljoyn-7704474bb3f3781e5a710432ea043182.jar
+Android/NFC_Flower_Service/bin/AndroidManifest.xml
+Android/NFC_Flower/bin/dexedLibs/alljoyn-78266147f68b21825924e65d979d0045.jar
