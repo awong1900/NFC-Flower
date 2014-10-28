@@ -594,11 +594,11 @@ public class MainActivity extends Activity {
 						Toast.LENGTH_LONG).show();
 				break;
 			case MESSAGE_START_PROGRESS_DIALOG:
-				//mDialog = ProgressDialog.show(MainActivity.this, "",
-				//		"Finding Simple Service.\nPlease wait...", true, true);
+				mDialog = ProgressDialog.show(MainActivity.this, "",
+						"正在连接TV服务器.\n请稍候...", true, true);
 				break;
 			case MESSAGE_STOP_PROGRESS_DIALOG:
-				//mDialog.dismiss();
+				mDialog.dismiss();
 				break;
 			default:
 				break;
