@@ -2,10 +2,10 @@
 <resources>
 
     <string name="app_name">NFC Flower</string>
+    <string name="app_copyright">Copyright © 2014. All Rights Reserved.</string>
     <string name="action_settings">Settings</string>
     <string name="about_us_weburl">Web：https://github.com/awong1900/NFC-Flower</string>
     <string name="about_us_email">Email：wangtengoo7@gmail.com</string>
-    <string name="app_copyright">Copyright © 2014. All Rights Reserved.</string>
     <string name="warning_write">Place the back of the device over the tag to write</string>
     <string name="water_flower">Water Flower</string>
     <string name="info_to_TV">Info to TV</string>

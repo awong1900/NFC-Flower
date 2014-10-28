@@ -8,6 +8,7 @@
     <string name="about_us_email">邮箱：wangtengoo7@gmail.com</string>
     <string name="warning_write">将手机靠近NFC TAG开始写入</string>
     <string name="water_flower">浇花</string>
+    <string name="info_to_TV">发送到TV</string>
     <string name="info_temperature">温度:</string>
     <string name="info_humidity">空气湿度:</string>
     <string name="info_moisture">土壤湿度:</string>
@@ -15,6 +16,7 @@
     <string name="settting_write_tag">保存</string>
     <string name="write_succ">成功写入标签！</string>
     <string name="write_failed">写入失败，请稍候重试！</string>
+    <string name="enter_message_hint">输入信息</string>
 
     <string-array name="titles">
         <item>信息</item>
