@@ -2,4 +2,5 @@
 <resources>
     
     <string name="app_name">NFC_Flower Service</string>
+    <string name="hello_world">hello world!</string>
 </resources>

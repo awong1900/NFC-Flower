@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.alljoyn.bus.flower.simpleservice"
+    package="com.alljoyn.display"
     android:versionCode="1"
     android:versionName="1.0" >
 
-    <uses-sdk android:minSdkVersion="10" />
+    <uses-sdk android:minSdkVersion="13" />
     <!-- Permission required to use the TCP transport -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
@@ -16,11 +16,23 @@
 
     <application
         android:icon="@drawable/icon"
-        android:label="@string/app_name" >
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Holo.Light" >
+        <service
+            android:name="org.alljoyn.bus.flower.simpleservice.alljoynService"
+            android:enabled="true" >
+        </service>
+
         <activity
-            android:name="org.alljoyn.bus.flower.simpleservice.Service"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait" >
+            android:name="com.alljoyn.display.TvDisplay"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="com.alljoyn.flower" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".test" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

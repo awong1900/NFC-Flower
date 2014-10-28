@@ -27,7 +27,7 @@ import org.alljoyn.bus.annotation.BusMethod;
  * not given the fully qualified name of the Java interface is be used.  In most instances its best
  * to assign an interface name since it helps promote code reuse.
  */
-@BusInterface(name = "org.alljoyn.bus.flower.simple.SimpleInterface")
+@BusInterface(name = "org.alljoyn.bus.samples.flower.SimpleInterface")
 public interface SimpleInterface {
 
     /*

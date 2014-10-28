@@ -24,7 +24,7 @@ import org.alljoyn.bus.ProxyBusObject;
 import org.alljoyn.bus.SessionListener;
 import org.alljoyn.bus.SessionOpts;
 import org.alljoyn.bus.Status;
-import org.alljoyn.bus.alljoyn.DaemonInit;
+import com.flower.nfcaction.R;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -102,32 +102,32 @@ public class Client extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-//		setContentView(R.layout.main);
+		setContentView(R.layout.main);
 
-//		mListViewArrayAdapter = new ArrayAdapter<String>(this, R.layout.message);
-//		mListView = (ListView) findViewById(R.id.ListView);
-//		mListView.setAdapter(mListViewArrayAdapter);
-//
-//		mEditText = (EditText) findViewById(R.id.EditText);
-//		mEditText
-//				.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-//					public boolean onEditorAction(TextView view, int actionId,
-//							KeyEvent event) {
-//						if (actionId == EditorInfo.IME_NULL
-//								&& event.getAction() == KeyEvent.ACTION_UP) {
-//							/* Call the remote object's Ping method. */
-//							Message msg = mBusHandler.obtainMessage(
-//									BusHandler.PING, view.getText().toString());
-//							mBusHandler.sendMessage(msg);
-//							
-//							Message msg_flower = mBusHandler
-//									.obtainMessage(BusHandler.FLOWER);
-//							mBusHandler.sendMessage(msg_flower);
-//						}
-//						
-//						return true;
-//					}
-//				});
+		mListViewArrayAdapter = new ArrayAdapter<String>(this, R.layout.message);
+		mListView = (ListView) findViewById(R.id.ListView);
+		mListView.setAdapter(mListViewArrayAdapter);
+
+		mEditText = (EditText) findViewById(R.id.EditText);
+		mEditText
+				.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+					public boolean onEditorAction(TextView view, int actionId,
+							KeyEvent event) {
+						if (actionId == EditorInfo.IME_NULL
+								&& event.getAction() == KeyEvent.ACTION_UP) {
+							/* Call the remote object's Ping method. */
+							Message msg = mBusHandler.obtainMessage(
+									BusHandler.PING, view.getText().toString());
+							mBusHandler.sendMessage(msg);
+
+							// Message msg_flower = mBusHandler
+							// .obtainMessage(BusHandler.FLOWER);
+							// mBusHandler.sendMessage(msg_flower);
+						}
+
+						return true;
+					}
+				});
 
 		/*
 		 * Make all AllJoyn calls through a separate handler thread to prevent
@@ -142,8 +142,23 @@ public class Client extends Activity {
 		mHandler.sendEmptyMessage(MESSAGE_START_PROGRESS_DIALOG);
 	}
 
-
-
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		MenuInflater inflater = getMenuInflater();
+		inflater.inflate(R.menu.mainmenu, menu);
+		this.menu = menu;
+		return true;
+	}
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case R.id.quit:
+			finish();
+			return true;
+		default:
+			return super.onOptionsItemSelected(item);
+		}
+	}
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
@@ -162,7 +177,7 @@ public class Client extends Activity {
 		 * The name uses reverse URL style of naming, and matches the name used
 		 * by the service.
 		 */
-		private static final String SERVICE_NAME = "org.alljoyn.bus.samples.simple";
+		private static final String SERVICE_NAME = "org.alljoyn.bus.flower.simple";
 		private static final short CONTACT_PORT = 42;
 
 		private BusAttachment mBus;
@@ -197,9 +212,10 @@ public class Client extends Activity {
 			 * SimpleInterface.
 			 */
 			case CONNECT: {
-				Log.d(TAG,"CONNECT!");
-				
-				DaemonInit.PrepareDaemon(getApplicationContext());
+				Log.d(TAG, "CONNECT!");
+
+				org.alljoyn.bus.alljoyn.DaemonInit
+						.PrepareDaemon(getApplicationContext());
 				/*
 				 * All communication through AllJoyn begins with a
 				 * BusAttachment.
@@ -274,7 +290,7 @@ public class Client extends Activity {
 				break;
 			}
 			case (JOIN_SESSION): {
-				Log.d(TAG,"JOIN_SESSION!");
+				Log.d(TAG, "JOIN_SESSION!");
 
 				/*
 				 * If discovery is currently being stopped don't join to any
@@ -341,7 +357,7 @@ public class Client extends Activity {
 
 			/* Release all resources acquired in the connect. */
 			case DISCONNECT: {
-				Log.d(TAG,"DISCONNECT!");
+				Log.d(TAG, "DISCONNECT!");
 
 				mIsStoppingDiscovery = true;
 				if (mIsConnected) {
@@ -361,7 +377,7 @@ public class Client extends Activity {
 			 * interface.
 			 */
 			case PING: {
-				Log.d(TAG,"PING!");
+				Log.d(TAG, "PING!");
 
 				try {
 					if (mSimpleInterface != null) {
@@ -374,17 +390,18 @@ public class Client extends Activity {
 				}
 				break;
 			}
-			
+
 			case FLOWER: {
-				Log.d(TAG,"FLOWER!");
+				Log.d(TAG, "FLOWER!");
 
 				try {
 					if (mSimpleInterface != null) {
-						//sendUiMessage(MESSAGE_PING, msg.obj);
-						//String reply = mSimpleInterface.Ping((String) msg.obj);
-						//sendUiMessage(MESSAGE_PING_REPLY, reply);
-						
-						byte[] data = {0, 1};
+						// sendUiMessage(MESSAGE_PING, msg.obj);
+						// String reply = mSimpleInterface.Ping((String)
+						// msg.obj);
+						// sendUiMessage(MESSAGE_PING_REPLY, reply);
+
+						byte[] data = { 0, 1 };
 						mSimpleInterface.flower(data);
 					}
 				} catch (BusException ex) {

@@ -27,7 +27,7 @@
             android:layout_toRightOf="@id/temperature_textview"
             android:paddingLeft="5dip"
             android:paddingTop="12dip"
-            android:text="20°C" />
+            android:text="26°C" />
 
         <View
             android:id="@+id/split_textview1"
@@ -79,7 +79,7 @@
             android:layout_toRightOf="@id/moisture_textview"
             android:paddingLeft="5dip"
             android:paddingTop="12dip"
-            android:text="40%" />
+            android:text="70%" />
     </RelativeLayout>
 
     <LinearLayout
@@ -94,6 +94,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="50dip"
             android:text="" />
+
+        <Button
+            android:id="@+id/tv_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/info_to_TV" />
 
         <Button
             android:id="@+id/wather_btn"

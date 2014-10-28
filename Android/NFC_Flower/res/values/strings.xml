@@ -8,6 +8,7 @@
     <string name="app_copyright">Copyright © 2014. All Rights Reserved.</string>
     <string name="warning_write">Place the back of the device over the tag to write</string>
     <string name="water_flower">Water Flower</string>
+    <string name="info_to_TV">Info to TV</string>
     <string name="info_temperature">Temperature:</string>
     <string name="info_humidity">Humidity:</string>
     <string name="info_moisture">Moisture:</string>
@@ -15,6 +16,7 @@
     <string name="settting_write_tag">Save</string>
     <string name="write_failed">Failed to write，please try again later!</string>
     <string name="write_succ">Tag has been written successfully!</string>
+    <string name="enter_message_hint">Enter message</string>
 
     <string-array name="titles">
         <item>info</item>
