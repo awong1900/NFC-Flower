@@ -27,9 +27,9 @@ public class TvDisplay extends Activity {
 		tem = (TextView) findViewById(R.id.tem);
 		moi = (TextView) findViewById(R.id.moi);
 
-		hum.setText("¿ÕÆøÊª¶È£º" + flower[0] + "%");
-		tem.setText("ÎÂ¶È£º" + flower[1] + "¡ãC");
-		moi.setText("ÍÁÈÀÊª¶È£º" + flower[2] + "%");
+		hum.setText("ç©ºæ°”æ¹¿åº¦ï¼š" + flower[0] + "%");
+		tem.setText("æ¸©åº¦ï¼š" + flower[1] + "Â°C");
+		moi.setText("åœŸå£¤æ¹¿åº¦ï¼š" + flower[2] + "%");
 
 		TimerTask task = new TimerTask() {
 			public void run() {
@@ -49,9 +49,9 @@ public class TvDisplay extends Activity {
 		if (intent.getAction().equals("com.alljoyn.flower")) {
 			
 			byte[] flower = intent.getByteArrayExtra("flower");
-			hum.setText("¿ÕÆøÊª¶È£º" + flower[0] + "%");
-			tem.setText("ÎÂ¶È£º" + flower[1] + "¡ãC");
-			moi.setText("ÍÁÈÀÊª¶È£º" + flower[2] + "%");
+			hum.setText("ç©ºæ°”æ¹¿åº¦ï¼š" + flower[0] + "%");
+			tem.setText("æ¸©åº¦ï¼š" + flower[1] + "Â°C");
+			moi.setText("åœŸå£¤æ¹¿åº¦ï¼š" + flower[2] + "%");
 
 			
 			TimerTask task = new TimerTask() {
