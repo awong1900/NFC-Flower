@@ -108,6 +108,13 @@ public class MainActivity extends Activity {
 			}
 		}
 	}
+	
+	@Override
+	protected void onNewIntent(Intent intent) {
+		Log.d(TAG, "onNewIntent");
+		super.onNewIntent(intent);
+		setIntent(intent);
+	}
 
 	@Override
 	protected void onDestroy() {
@@ -169,8 +176,8 @@ public class MainActivity extends Activity {
 		}
 
 		/* Call the remote object's Ping method. */
-		Message msg = mBusHandler.obtainMessage(BusHandler.FLOWER, flower);
-		mBusHandler.sendMessage(msg);
+		 Message msg = mBusHandler.obtainMessage(BusHandler.FLOWER, flower);
+		 mBusHandler.sendMessage(msg);
 	}
 
 	private void initView() {
