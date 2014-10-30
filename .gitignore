@@ -1,10 +1,10 @@
-Android/NFC_Flower/.settings/org.eclipse.core.resources.prefs
+Android/NFC_Flower_Client/.settings/org.eclipse.core.resources.prefs
 *.class
-Android/NFC_Flower/bin/
-Android/NFC_Flower/gen/
+Android/NFC_Flower_Client/bin/
+Android/NFC_Flower_Client/gen/
 Android/NFC_Flower_Service/bin/
 Android/NFC_Flower_Service/gen/
 Android/flowe-alljoyn
 
-Android/NFC_Flower/.svn/
+Android/NFC_Flower_Client/.svn/
 Android/NFC_Flower_Service/.svn/

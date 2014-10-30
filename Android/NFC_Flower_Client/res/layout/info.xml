@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EBEBEB" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="10dip"
+        android:background="@drawable/block_bg2" >
+
+        <TextView
+            android:id="@+id/temperature_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="44dip"
+            android:paddingLeft="5dip"
+            android:paddingTop="12dip"
+            android:text="@string/info_temperature" />
+
+        <TextView
+            android:id="@+id/temperature_textview_info"
+            android:layout_width="wrap_content"
+            android:layout_height="44dip"
+            android:layout_toRightOf="@id/temperature_textview"
+            android:paddingLeft="5dip"
+            android:paddingTop="12dip"
+            android:text="26°C" />
+
+        <View
+            android:id="@+id/split_textview1"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:layout_below="@id/temperature_textview"
+            android:background="#ffc8cfda" />
+
+        <TextView
+            android:id="@+id/humidity_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="44dip"
+            android:layout_below="@id/split_textview1"
+            android:paddingLeft="5dip"
+            android:paddingTop="12dip"
+            android:text="@string/info_humidity" />
+
+        <TextView
+            android:id="@+id/humidity_textview_info"
+            android:layout_width="wrap_content"
+            android:layout_height="44dip"
+            android:layout_below="@id/split_textview1"
+            android:layout_toRightOf="@id/humidity_textview"
+            android:paddingLeft="5dip"
+            android:paddingTop="12dip"
+            android:text="40%" />
+
+        <View
+            android:id="@+id/split_textview2"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:layout_below="@id/humidity_textview"
+            android:background="#ffc8cfda" />
+
+        <TextView
+            android:id="@+id/moisture_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="44dip"
+            android:layout_below="@id/split_textview2"
+            android:paddingLeft="5dip"
+            android:paddingTop="12dip"
+            android:text="@string/info_moisture" />
+
+        <TextView
+            android:id="@+id/moisture_textview_info"
+            android:layout_width="wrap_content"
+            android:layout_height="44dip"
+            android:layout_below="@id/split_textview2"
+            android:layout_toRightOf="@id/moisture_textview"
+            android:paddingLeft="5dip"
+            android:paddingTop="12dip"
+            android:text="70%" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/Water_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dip"
+            android:text="" />
+
+        <Button
+            android:id="@+id/tv_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/info_to_TV" />
+
+        <Button
+            android:id="@+id/wather_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/water_flower" />
+    </LinearLayout>
+
+</RelativeLayout>
