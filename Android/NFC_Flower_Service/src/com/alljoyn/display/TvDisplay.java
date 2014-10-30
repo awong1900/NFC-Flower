@@ -1,4 +1,4 @@
-﻿package com.alljoyn.display;
+package com.alljoyn.display;
 
 import java.util.Timer;
 import java.util.TimerTask;
