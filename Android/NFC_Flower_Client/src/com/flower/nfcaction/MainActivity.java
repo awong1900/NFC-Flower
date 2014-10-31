@@ -41,7 +41,7 @@ import org.alljoyn.bus.SessionOpts;
 import org.alljoyn.bus.Status;
 
 import com.flower.alljoyn.client.SimpleInterface;
-import com.flower.nfcaction.alljoyn.R;
+import com.flower.nfcaction.R;
 
 public class MainActivity extends Activity {
 	/* Load the native alljoyn_java library. */

@@ -25,7 +25,7 @@ import org.alljoyn.bus.SessionListener;
 import org.alljoyn.bus.SessionOpts;
 import org.alljoyn.bus.Status;
 
-import com.flower.nfcaction.alljoyn.R;
+import com.flower.nfcaction.R;
 
 import android.app.Activity;
 import android.app.ProgressDialog;

@@ -23,7 +23,7 @@ import android.widget.Toast;
 
 import java.io.IOException;
 
-import com.flower.nfcaction.alljoyn.R;
+import com.flower.nfcaction.R;
 
 public class WriteTag extends Activity {
     // URL share
